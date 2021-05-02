@@ -45,7 +45,7 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
     filter {
-    includeTestsMatching("com.salvoronis.lab3.BuyPageTest.*")
+    includeTestsMatching("com.salvoronis.lab3.SellPageTest.*")
     }
     testLogging {
         events("passed", "skipped", "failed", "standardOut", "standardError")

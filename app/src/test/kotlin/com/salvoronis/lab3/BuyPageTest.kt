@@ -20,7 +20,6 @@ class BuyPageTest : TestMainClass() {
 
         WebDriverWait(driver, 15L)
         .until(ExpectedConditions.visibilityOf(page.phoneButton)).click()
-        //page.phoneButton.click()
 
         WebDriverWait(driver, 10L)
         .until(ExpectedConditions.visibilityOf(page.phoneNumb))
