@@ -20,8 +20,43 @@ class SelectCarPageTest : TestMainClass() {
         page.brand.click()
         page.audi.click()
         page.model.click()
-        val wait: WebDriverWait = WebDriverWait(driver, 10L)
-        wait.until(ExpectedConditions.visibilityOf(page.somecar))
-        page.somecar.click()
+        WebDriverWait(driver, 25L)
+        .until(ExpectedConditions.visibilityOf(page.showCarsBody)).click()
+    }
+
+    @Test fun mainPage(){
+        driver.get(url)
+        println("'${driver.title}'")
+        assertTrue(driver.title.contains("Каталог автомобилей на Авто.ру"))
+    }
+
+    @Test fun newInKatalog() {
+        driver.get(url)
+        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.newInKatalogue))
+    }
+
+    @Test fun families() {
+        driver.get(url)
+        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.families))
+    }
+
+    @Test fun classi() {
+        driver.get(url)
+        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.classi))
+    }
+
+    @Test fun special() {
+        driver.get(url)
+        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.special))
+    }
+
+    @Test fun newVideos() {
+        driver.get(url)
+        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.newVideos))
+    }
+
+    @Test fun dialers() {
+        driver.get(url)
+        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.dialers))
     }
 }

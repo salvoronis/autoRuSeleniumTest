@@ -12,8 +12,20 @@ class BuyPage(var driver: WebDriver) {
     @FindBy(xpath = "/html/body/div[2]/div/div[2]/div[3]/div[2]/div/div[2]/div/div[3]/div[2]/button")
     lateinit var phoneButton: WebElement
 
-    @FindBy(xpath = "/html/body/div[4]/div/div/div[1]/div/div/div/div/div/div[1]/div[1]/div/div[2]/div[2]/div/a")
+    @FindBy(xpath = "//div[2]/div[2]/div/a")
     lateinit var phoneNumb: WebElement
+
+    @FindBy(xpath = "/html/body/div[2]/div/div[2]/div[3]/div[2]/div/div[2]/div/div[4]")
+    lateinit var mainInfo: WebElement
+
+    @FindBy(xpath = "/html/body/div[2]/div/div[2]/div[3]/div[2]/div/div[2]/div/div[5]/div/div")
+    lateinit var special: WebElement
+
+    @FindBy(xpath = "/html/body/div[2]/div/div[2]/div[3]/div[2]/div/div[2]/div/div[6]/div/div")
+    lateinit var simillar: WebElement
+
+    @FindBy(xpath = "/html/body/div[2]/div/div[2]/div[3]/div[2]/div/div[2]/div/div[7]")
+    lateinit var parts: WebElement
 
     init {
         PageFactory.initElements(driver, this)

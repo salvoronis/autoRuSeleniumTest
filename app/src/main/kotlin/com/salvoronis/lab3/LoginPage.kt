@@ -20,6 +20,9 @@ class LoginPage(var driver: WebDriver) {
     @FindBy(xpath = "/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[1]/div/h1/span")
     lateinit var errorText: WebElement
 
+    @FindBy(xpath = "/html/body/div/div/div/div/form/div/div[3]")
+    lateinit var loginForm: WebElement
+
     fun login(loginStr: String):String {
         loginIcon.click()
         val parentWindow: String = driver.getWindowHandle()

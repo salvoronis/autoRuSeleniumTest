@@ -15,6 +15,12 @@ class SellPageTest : TestMainClass() {
         page = SellPage(driver)
     }
 
+    @Test fun mainTest(){
+        driver.get(url)
+        println("'${driver.title}'")
+        assertTrue(driver.title.contains("Размещение объявления"))
+    }
+
     @Test fun sellTest(){
         driver.get(url)
 
