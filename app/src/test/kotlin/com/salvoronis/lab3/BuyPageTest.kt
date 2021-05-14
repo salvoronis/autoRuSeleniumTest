@@ -35,21 +35,25 @@ class BuyPageTest : TestMainClass() {
 
     @Test fun mainInfo() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.mainInfo))
+        val mainInfo = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.mainInfo))
+        assertNotNull(mainInfo)
     }
 
     @Test fun special() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.special))
+        val special = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.special))
+        assertNotNull(special)
     }
 
     @Test fun simillar() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.simillar))
+        val simillar = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.simillar))
+        assertNotNull(simillar)
     }
 
     @Test fun parts() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.parts))
+        val parth = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.parts))
+        assertNotNull(parth)
     }
 }

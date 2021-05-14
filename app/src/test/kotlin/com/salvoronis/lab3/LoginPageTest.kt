@@ -39,7 +39,8 @@ class LoginPageTest : TestMainClass() {
 
     @Test fun hasLoginBar() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.loginForm))
+        val hasLoginBar = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.loginForm))
+        assertNotNull(hasLoginBar, "It has to be not null")
     }
 
 }

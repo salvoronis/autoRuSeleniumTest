@@ -20,43 +20,51 @@ class SelectCarPageTest : TestMainClass() {
         page.brand.click()
         page.audi.click()
         page.model.click()
-        WebDriverWait(driver, 25L)
+        val body = WebDriverWait(driver, 25L)
         .until(ExpectedConditions.visibilityOf(page.showCarsBody)).click()
+        assertNotNull(body)
     }
 
     @Test fun mainPage(){
         driver.get(url)
         println("'${driver.title}'")
-        assertTrue(driver.title.contains("Каталог автомобилей на Авто.ру"))
+        val mainPage = assertTrue(driver.title.contains("Каталог автомобилей на Авто.ру"))
+        assertNotNull(mainPage)
     }
 
     @Test fun newInKatalog() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.newInKatalogue))
+        val mainPage = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.newInKatalogue))
+        assertNotNull(mainPage)
     }
 
     @Test fun families() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.families))
+        val families = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.families))
+        assertNotNull(families)
     }
 
     @Test fun classi() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.classi))
+        val classi = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.classi))
+        assertNotNull(classi)
     }
 
     @Test fun special() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.special))
+        val special = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.special))
+        assertNotNull(special)
     }
 
     @Test fun newVideos() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.newVideos))
+        val newVideos = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.newVideos))
+        assertNotNull(newVideos)
     }
 
     @Test fun dialers() {
         driver.get(url)
-        WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.dialers))
+        val dialers = WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOf(page.dialers))
+        assertNotNull(dialers)
     }
 }

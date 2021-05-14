@@ -33,7 +33,8 @@ class SellPageTest : TestMainClass() {
         WebDriverWait(driver, 15L)
         .until(ExpectedConditions.visibilityOf(page.year)).click()
 
-        WebDriverWait(driver, 15L)
+        val sellThing = WebDriverWait(driver, 15L)
         .until(ExpectedConditions.visibilityOf(page.body)).click()
+        assertNotNull(sellThing)
     }
 }
